@@ -41,6 +41,9 @@ public class UserOfSorts {
         oneTest( "insertion sort "
                , new InsertionSorter( unsorted)
                );
+        oneTest( "selection sort "
+               , new SelectionSorter( unsorted)
+               );
     }
 
 
