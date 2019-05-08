@@ -17,6 +17,10 @@ public class SelectionSorter extends Sorter {
     /**
       sort the user's data, implementing insertion sort
      */
+    /**
+      Pre-condition: The list must have only Strings
+      Post-condition: The list will be returned sorted
+     */
     public void mySort() {
         for (int index = 0; index < elements.size(); index++){
 			int nextLargerAt = champIndex(index);
@@ -25,7 +29,10 @@ public class SelectionSorter extends Sorter {
 			elements.set(nextLargerAt, currentValue);
 		}
 	}
-	
+	/**
+      Pre-condition: The list must have only Strings
+      Post-condition: The lowest index will go to the end of the list
+     */
 	private int champIndex(int lowestIndex) {
 		 String champ = "ZZZZZZZZ";
 		 for (int index = lowestIndex; index < elements.size(); index++){

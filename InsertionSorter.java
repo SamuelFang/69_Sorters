@@ -17,6 +17,10 @@ public class InsertionSorter extends Sorter {
     /**
       sort the user's data, implementing insertion sort
      */
+    /**
+      Pre-condition: The list must have only Strings
+      Post-condition: The list will be returned sorted
+     */
     public void mySort() {
 		for (int numSorted = 1; numSorted < elements.size(); numSorted++){
 			insert1(numSorted);
@@ -27,7 +31,10 @@ public class InsertionSorter extends Sorter {
 						// );
 		}
 	}
-	
+	/**
+      Pre-condition: The list must have only Strings
+      Post-condition: The element will be sorted into the right place in the unsorted part
+     */
 	public void insert1(int numSorted){
 		String valueToInsert = elements.get(numSorted);
 		for (int indexToCompare = numSorted - 1;indexToCompare >= 0;indexToCompare--){
